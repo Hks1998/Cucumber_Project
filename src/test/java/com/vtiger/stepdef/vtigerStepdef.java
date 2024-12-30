@@ -58,6 +58,7 @@ public class vtigerStepdef {
 	    Assert.assertTrue(AcT.contains("TCS"));
 	    System.out.println("Organization Title is matched");
 	    System.out.println("Organization created successfully and TC is passed");
+	    driver.close();
 	}
 
 

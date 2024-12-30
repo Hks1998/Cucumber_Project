@@ -1,4 +1,4 @@
-package stepdef;
+package com.google.stepdef;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.java.en.*;
 
-public class GooglestepDef {
+public class GoogleStepDef {
 	 public WebDriver driver;
 	 public String AcT;
 	@Given("Open the Google application")
@@ -27,6 +27,7 @@ public class GooglestepDef {
 		
 		System.out.println("Title is matched "+AcT);
 		System.out.println("Tc is passed");
+		driver.close();
 		
 	}
 }

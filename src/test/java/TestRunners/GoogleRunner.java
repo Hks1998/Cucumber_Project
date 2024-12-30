@@ -1,12 +1,15 @@
 package TestRunners;
 
-import org.junit.runner.RunWith;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
-
-@RunWith(Cucumber.class)
-@CucumberOptions(features ="C:\\Users\\harsh\\Downloads\\eclipse-workspace-2a\\eclipse-workspace-2\\CucumberFramework\\src\\test\\resources\\Featurefiles\\Google.feature",glue = "stepdef")
-public class GoogleRunner {
+@CucumberOptions(features = "src/test/resources/Featurefiles/Google.feature",
+glue = {"com.google.stepdef"},
+plugin = {"pretty", "html: target/cucumber-reports_google.html", "json: target/cucumber-reports_google.json"},
+monochrome = true,
+dryRun = false,
+tags = "@smoke"
+)
+public class GoogleRunner extends AbstractTestNGCucumberTests {
 
 }

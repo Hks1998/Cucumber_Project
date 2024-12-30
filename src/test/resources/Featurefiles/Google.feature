@@ -1,3 +1,4 @@
+@smoke
 Feature: Test for Google application
 
   Scenario: Test for google title
